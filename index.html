@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EcoBots</title>
+    <link rel="canonical" href="https://ecobots.ai" />
+    
+    <link rel="icon" href="assets/favicon/favicon.ico">
+    <meta property="og:title" content="EcoBots">
+    <meta property="og:image" content="assets/logos/apple-touch-icon.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/logos/apple-touch-icon.jpg">
+    
+    <script>
+        window.scrollOffsetFunction = function() {
+            var navElements = document.getElementsByClassName("c-navbar");
+            if (typeof navElements[0] !== "undefined") {
+                var navRect = navElements[0].getBoundingClientRect();
+                var navStyle = getComputedStyle(navElements[0]);
+                if (navStyle.position === "sticky" || navStyle.position === "fixed") {
+                    return navRect.bottom - navRect.top + 30;
+                }
+            }
+            return 0;
+        }
+
+    </script>
+    
+    <link rel="preload" as="style" href="assets/dist/css/main.0da374f4440526d1630a13c1f3e59412ce308fb74066b73d0f8c21715cfe36ac.css">
+    <link rel="stylesheet" href="assets/dist/css/main.0da374f4440526d1630a13c1f3e59412ce308fb74066b73d0f8c21715cfe36ac.css">
+    
+    <script src="assets/dist/js/icons.js"></script>
+    
+</head>
+
+<body>
+
+    <div class="c-navbar  u-border-b " data-controller="attribute logged-in">
+        <div class="c-navbar__content">
+            <a href="/" class="c-navbar__logo"><img src="assets/logos/logo_225_color.png" alt="EcoBots logo" width="134" height="30"></a>
+            <button class="c-navbar__button" aria-expanded="false" data-action="attribute#toggleHidden">
+                <span data-attribute-target="element">Menu</span>
+                <span hidden data-attribute-target="element">Close</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 16" width="20" class="b--u-ml-1">
+                    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path d="M1 3.5h15" class="c-navbar__button__bar" />
+                        <path d="M1 8h15" class="c-navbar__button__bar" />
+                        <path d="M1 12.5h15" class="c-navbar__button__bar" />
+                    </g>
+                </svg>
+            </button>
+            <nav class="c-menu b--lg:u-ml-2.5 b--xl:u-ml-6 " data-controller="menu" data-attribute-target="element" hidden>
+                <ul>
+                    <li data-menu-target="root">
+                        <button class="c-menu__item v--top" data-menu-target="top">Product<span class="c-menu__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6666 6L7.99992 10.6667L3.33325 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                        <div class="c-menu__sub">
+                            <div class="c-menu__split">
+                                
+                                <div>
+                                    <p class="c-menu__header">Solutions</p>
+                                    <ul>
+                                        <li><a href="solutions/customer-support.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M5.1 17.8a14 14 0 0113.8 0M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Customer Support</a></li>
+                                        <li><a href="solutions/sales-and-marketing.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3 3h2l.4 2m0 0H21l-4 8H7M5.4 5L7 13m0 0l-2.3 2.3a1 1 0 00.7 1.7H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Sales & Marketing</a></li>
+                                        <li><a href="enterprise.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3 11h2a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v3M8 4v1.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 004 0 2 2 0 012-2h1m-5 12.5V18a2 2 0 012-2h3m1-4a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Enterprise</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-menu-target="root">
+                        <a class="c-menu__item v--top" href="pricing.html" data-menu-target="top">Pricing</a>
+                    </li>
+                    <li data-menu-target="root">
+                        <button class="c-menu__item v--top" data-menu-target="top">
+                            <span data-logged-in-target="hide">Integrations</span>
+                            <span data-logged-in-target="show">Marketplace</span>
+                            <span class="c-menu__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6666 6L7.99992 10.6667L3.33325 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                        <div class="c-menu__sub">
+                            <div class="c-menu__split">
+                                <div class="v--reset">
+                                    <p class="c-menu__header" data-logged-in-target="hide">Top Apps</p>
+                                    <p class="c-menu__header" data-logged-in-target="show">Top integrations</p>
+                                    <ul>
+                                        <li><a href="shopify-chat.html" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="m19.2 5.5-.2-.2h-1.6L16 4c-.1-.2-.4 0-.4 0H15l-.4-.6c-.4-.9-1-1.3-1.9-1.3h-.2c-.3-.4-.8-.6-1.3-.6-1 0-2 .7-2.9 2.1-.6 1-1 2-1.1 3l-2 .6c-.7.2-.7.2-.7.7L2.9 20.3l13 2.2 5.6-1.4-2.3-15.6Zm-5-1.2-1 .4c0-.5 0-1.3-.2-1.9.8.1 1.2 1 1.3 1.5Zm-1.6.5-2.2.7c.2-.8.7-1.6 1.2-2 .1-.3.4-.5.7-.6.2.6.3 1.4.3 2Zm-1.4-2.6c.2 0 .4 0 .6.2-.2 0-.6.3-.8.6-.6.7-1.2 1.8-1.4 2.8L8 6.4c.4-1.8 1.7-4.2 3.3-4.2Z" fill="#95BF47" />
+                                                        <path d="M19 5.4h-1.6L16 4H16v18.5l5.6-1.4-2.3-15.6-.2-.1Z" fill="#5E8E3E" />
+                                                        <path d="m12.7 8.2-.6 2.4s-.7-.3-1.6-.2c-1.3 0-1.3.9-1.3 1 0 1.2 3 1.4 3.1 4 .1 2-1 3.3-2.8 3.5-2 0-3.2-1.2-3.2-1.2l.4-1.8s1.2.9 2 .8c.7 0 .9-.6.9-.9 0-1.4-2.4-1.3-2.6-3.7-.1-2 1.2-4 4-4.1 1.2 0 1.7.2 1.7.2Z" fill="#fff" />
+                                                    </svg></span>Shopify</a></li>
+                                        <li><a href="marketplace/apps/squarespace.html#description" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.4 12 12 5.5a2.4 2.4 0 0 1 3.4 0l.5.5 1-1-.5-.6a3.8 3.8 0 0 0-5.4 0L4.4 11l1 1Z" fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="m14.3 7.6-1-1-6.7 6.6c-1 1-2.5 1-3.4 0-1-.9-1-2.4 0-3.4L8.9 4 8 3 2 8.8a4 4 0 0 0 0 5.5 3.8 3.8 0 0 0 5.5 0l6.7-6.7ZM20.9 8.8a3.8 3.8 0 0 0-5.5 0l-6.7 6.7 1 1 6.7-6.6a2.4 2.4 0 0 1 4.1 1.7c0 .6-.2 1.2-.7 1.7l-5.7 5.8 1 1 5.8-5.8a4 4 0 0 0 0-5.5Z" fill="currentColor" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6 11 11 17.9c-1 1-2.5 1-3.4 0l-.5-.5-1 1 .5.5a3.8 3.8 0 0 0 5.4 0l6.6-6.7-1-1Z" fill="currentColor" />
+                                                    </svg>
+                                                </span>Squarespace</a></li>
+                                        <li><a href="marketplace/apps/mailchimp.html#description" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 1.5a10.5 10.5 0 1 0 0 21 10.5 10.5 0 0 0 0-21Z" fill="#FDDD4C" />
+                                                        <path d="M7.4 14.7c-.2-.3.3-.8.1-1.3a.8.8 0 0 0-1.3-.2c-.3.3-.3.7-.2.8v.1c.2 0 .2-.3.3-.4.1-.2.4-.3.7-.2.4.3 0 .7 0 1 0 .4.3.6.5.6l.4-.2c0-.2-.3.1-.5-.2ZM16 11.5h-.4l-.2-.5c-.1-.4-.1-.7.1-.7.3 0 .4.2.5.6v.6ZM13.4 11.8v.2l.4.2v.1h-.4c0 .2-.2.2-.4 0 0 0-.2.2-.3 0l.2-.1-.1-.5-.4.1H12l.2-.2.4-.2c0-.2 0-.4.2-.4s.3.1.4.4c.3 0 .5.2.6.4v.1l-.5-.1ZM15 12.7h.3c0-.1 0-.3-.2-.3h-.3c-.1.1 0 .3.1.3ZM15.6 12.2c0-.2.1-.3.3-.3l.2.3c0 .2-.1.3-.2.3-.2 0-.3-.1-.3-.3Z" fill="#000" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9 14.2c.2 0 .6.3.6 1 0 .6-.3 1.3-.3 1.5-1 2.3-3.4 3.6-6.2 3.5a6.4 6.4 0 0 1-5.8-3.6c-.6 0-1.2-.3-1.7-.7-.5-.4-.8-1-.9-1.5 0-.5 0-1 .2-1.3l-.6-.4c-2.5-2.1 5.4-10.8 8-8.6l.8.8c1.2-.5 4.4-1.5 4.4.8 0 .8-.4 1.6-1.2 2.4.9.8.6 2 .8 3l.3.2c.6.1 1 .3 1.2.6l.4.6c0 .2 0 .6-.3 1l.3.7ZM7 16h.3c.9-.2 1.1-1.2 1-2.2-.2-1-1-1.4-1.5-1.5h-.3c-1 .2-1.5 1-1.4 2 .1.9 1 1.6 2 1.7Zm-2-3.4c.3-.4.8-.7 1.3-.8.7-2 2-3.7 3.5-4.9 1.2-1 2.5-1.7 2.5-1.7s-.7-.8-1-.8c-1.2-.3-4 1.5-5.7 4C5 9.4 4 11.2 4.5 12l.6.5Zm10.3 3s-1 .4-2.7 0c0 .4.6.6 1 .7 2 .3 4-.8 4.4-1 0-.1 0 0 0 0-.6.7-2 1.4-3.8 1.4-.8 0-1.5-.2-1.8-.7-.5-.6 0-1.6.7-1.5a7 7 0 0 0 3.7-.5c1-.5 1.4-1 1.4-1.4-.1-.6-1-.7-1.5-.9-.3 0-.4-.1-.4-.5v-1c0-.5-.1-1-.5-1.3a.6.6 0 0 0-.5 0c-.2 0-.3 0-.5.2-.4.4-.8.4-1.3.4a7.9 7.9 0 0 1-.8 0h-.2c-.7 0-1.5.5-1.7 1.4-.1 1 .5 1.6.8 2l.2.2.1.2v.2a3.1 3.1 0 0 0-.7 3.3C12 18.3 14 19 16 18.4c1.4-.5 2.7-1.6 3-3 0-.4-.1-.6-.2-.7h-.3s0-.5-.3-1c-.6.5-1.3.9-1.9 1-.9.3-1.9.4-2.8.3-.4 0-.7-.1-.8.2 1.3.5 2.6.3 2.6.3Zm-3.7-8.9c-.6.4-1.4 1-2 1.7a6.4 6.4 0 0 1 5-1c-.4-.3-1-.4-1.5-.4 0-.2.2-.3.3-.3v-.1c-.6 0-2 .6-2 .6l.3-.5Z" fill="#000" />
+                                                    </svg></span>Mailchimp</a></li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="c-menu__header u-hidden lg:u-block"></p>
+                                    <ul class="b--lg:u-pt-2.5">
+                                        <li><a href="marketplace/apps/whatsapp-business.html#description" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 23.25C17.799 23.25 22.5 18.549 22.5 12.75C22.5 6.95101 17.799 2.25 12 2.25C6.20101 2.25 1.5 6.95101 1.5 12.75C1.5 14.6332 1.99575 16.4005 2.86386 17.9287L1.5 23.25L6.98615 21.9778C8.47603 22.7891 10.1842 23.25 12 23.25ZM12 21.6346C16.9068 21.6346 20.8846 17.6568 20.8846 12.75C20.8846 7.84316 16.9068 3.86538 12 3.86538C7.09316 3.86538 3.11538 7.84316 3.11538 12.75C3.11538 14.6445 3.70838 16.4006 4.71888 17.8427L3.92308 20.8269L6.95995 20.0677C8.39202 21.0559 10.1284 21.6346 12 21.6346Z" fill="#BFC8D0" />
+                                                        <path d="M21 12C21 16.9706 16.9706 21 12 21C10.1041 21 8.34516 20.4138 6.89449 19.4127L3.81818 20.1818L4.62432 17.1588C3.60069 15.698 3 13.9192 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" fill="url(#paint0_linear_45_490)" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5C6.20101 1.5 1.5 6.20101 1.5 12C1.5 13.8832 1.99575 15.6505 2.86386 17.1787L1.5 22.5L6.98615 21.2278C8.47603 22.0391 10.1842 22.5 12 22.5ZM12 20.8846C16.9068 20.8846 20.8846 16.9068 20.8846 12C20.8846 7.09316 16.9068 3.11538 12 3.11538C7.09316 3.11538 3.11538 7.09316 3.11538 12C3.11538 13.8945 3.70838 15.6506 4.71888 17.0927L3.92308 20.0769L6.95995 19.3177C8.39202 20.3059 10.1284 20.8846 12 20.8846Z" fill="white" />
+                                                        <path d="M9.37502 7.12501C9.12537 6.62357 8.7424 6.66797 8.35551 6.66797C7.66407 6.66797 6.58594 7.49618 6.58594 9.03756C6.58594 10.3008 7.14259 11.6836 9.01831 13.7522C10.8285 15.7485 13.207 16.7812 15.1816 16.746C17.1563 16.7109 17.5625 15.0117 17.5625 14.4378C17.5625 14.1835 17.4047 14.0566 17.2959 14.0221C16.6231 13.6992 15.382 13.0974 15.0996 12.9844C14.8172 12.8713 14.6698 13.0243 14.5781 13.1074C14.3221 13.3515 13.8144 14.0707 13.6406 14.2324C13.4668 14.3942 13.2077 14.3123 13.0999 14.2512C12.7031 14.092 11.6272 13.6134 10.7696 12.7821C9.70899 11.7539 9.64675 11.4002 9.44693 11.0853C9.28707 10.8334 9.40437 10.6789 9.46291 10.6113C9.69142 10.3477 10.007 9.94058 10.1485 9.73829C10.29 9.53599 10.1776 9.22885 10.1102 9.03756C9.82033 8.21485 9.57473 7.52615 9.37502 7.12501Z" fill="white" />
+                                                        <defs>
+                                                            <linearGradient id="paint0_linear_45_490" x1="19.875" y1="5.25" x2="3" y2="21" gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#5BD066" />
+                                                                <stop offset="1" stop-color="#27B43E" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg>
+                                                </span>WhatsApp</a></li>
+                                        <li><a href="marketplace/apps/facebook-messenger.html#description" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <circle cx="12" cy="12" r="10.5" fill="url(#a)" />
+                                                        <path d="m16 15.2.4-3h-3v-1.9c0-.8.5-1.6 1.8-1.6h1.3V6.2L14.1 6c-2.4 0-4 1.4-4 4v2.2H7.6v3h2.7v7.2a10.9 10.9 0 0 0 3.3 0v-7.2h2.4Z" fill="#fff" />
+                                                        <defs>
+                                                            <linearGradient id="a" x1="12" y1="1.5" x2="12" y2="22.4" gradientUnits="userSpaceOnUse">
+                                                                <stop stop-color="#18ACFE" />
+                                                                <stop offset="1" stop-color="#0163E0" />
+                                                            </linearGradient>
+                                                        </defs>
+                                                    </svg></span>Facebook</a></li>
+                                        <li><a href="marketplace/apps/hubspot.html#description" class="c-menu__item"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17.7 8.4V6a2 2 0 0 0 1.1-1.7 2 2 0 0 0-2-2 2 2 0 0 0-1.9 2A2 2 0 0 0 16 6v2.5c-1 .2-1.8.6-2.6 1.2L6.6 4.2a2.2 2.2 0 0 0-2.7-2.6A2.2 2.2 0 0 0 2.8 5a2.2 2.2 0 0 0 2.7.5l6.8 5.2a5.4 5.4 0 0 0 0 6.2l-2 2h-.5a1.8 1.8 0 0 0-1.7 2 1.8 1.8 0 0 0 2.4 1.4 1.8 1.8 0 0 0 1-1.7v-.5l2-2a5.5 5.5 0 0 0 8.1-7 5.5 5.5 0 0 0-4-2.8h.1Zm-.8 8.2a2.8 2.8 0 0 1-2.8-3.3 2.8 2.8 0 0 1 5.1-1 2.8 2.8 0 0 1-2.3 4.3" fill="#FF7A59" />
+                                                    </svg></span>HubSpot</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <a href="marketplace.html" class="c-menu__foot-action v--m-button">
+                                Discover 200+ integrations<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14 7.99992H2M9.33333 3.33325L14 7.99992L9.33333 3.33325ZM14 7.99992L9.33333 12.6666L14 7.99992Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </a>
+                        </div>
+                    </li>
+                    <li data-menu-target="root" data-logged-in-target="hide">
+                        <button class="c-menu__item v--top" data-menu-target="top">Customers<span class="c-menu__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6666 6L7.99992 10.6667L3.33325 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                        <div class="c-menu__sub">
+                            <div class="c-menu__split">
+                                <div>
+                                    <p class="c-menu__header">Industries</p>
+                                    <ul>
+                                        <li><a href="solutions/ecommerce.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M16 11V7a4 4 0 10-8 0v4M5 9h14l1 12H4L5 9z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Ecommerce</a></li>
+                                        <li><a href="solutions/it-software.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Software & IT</a></li>
+                                        <li><a href="solutions/education.html" class="c-menu__item v--m-button"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 20v-7.5l4-2.2m0 3.7l9-5-9-5-9 5 9 5zm0 0l6.2-3.4c.8 2 1 4.3.6 6.5a12 12 0 00-6.8 3 12 12 0 00-6.8-3 12 12 0 01.6-6.5L12 14z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Education</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li data-menu-target="root" data-logged-in-target="show">
+                        <a class="c-menu__item v--top" href="help.html" data-menu-target="top">Help Center</a>
+                    </li>
+                    <li class="v--only-mobile">
+                        <a href="app.html" class="c-menu__item v--top">
+                            App
+                        </a>
+                    </li>
+                    <li data-menu-target="root">
+                        <button class="c-menu__item v--top" data-menu-target="top">Resources<span class="c-menu__arrow"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6666 6L7.99992 10.6667L3.33325 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span></button>
+                        <div class="c-menu__sub">
+                            <div class="c-menu__split">
+                                <div>
+                                    <ul>
+                                        <li data-logged-in-target="hide"><a href="help.html" class="c-menu__item"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M12 16a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                        <path d="M12 21a9 9 0 100-18 9 9 0 000 18zM15 15l3.4 3.4M9 15l-3.4 3.4M5.6 5.6L9 9M18.4 5.6L15 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>Help Center</a></li>
+                                        <li class="v--only-mobile"><a href="success.html" class="c-menu__item" target="_blank"><span class="c-menu__icon v--mobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 2.7C0 1.2 1.2 0 2.7 0h18.6C22.8 0 24 1.2 24 2.7v18.6c0 1.5-1.2 2.7-2.7 2.7H2.7A2.7 2.7 0 010 21.3V2.7z" fill="#FFD000" />
+                                                        <path d="M7 12.6v-.2h2.6v.2c0 .9.8 1.5 2.1 1.5s2.1-.5 2.1-1.4c0-.5-.2-.8-.9-1L9.7 11c-1.6-.4-2.5-1.2-2.5-2.8C7.2 6 9 4.7 11.6 4.7c2.6 0 4.3 1.3 4.3 3.5v.1h-2.5v-.2c0-.8-.5-1.4-1.8-1.4-1.1 0-1.8.5-1.8 1.2 0 .6.3.8.8 1l3.3.8c1.6.4 2.5 1.3 2.5 2.8 0 2-2 3.6-4.7 3.6S7 14.9 7 12.6z" fill="#1B1B20" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6 8.9c-.5-.2-.8-.4-.8-1 0-.7.7-1.2 1.8-1.2 1.3 0 1.8.6 1.8 1.4v.2h2.5v-.1V8c-.1-2-1.8-3.3-4.3-3.3C9 4.7 7.2 6 7.2 8.2c0 1.6.9 2.4 2.5 2.8l3.2.8c.7.1 1 .4 1 1 0 .8-1 1.3-2.2 1.3-1.3 0-2.1-.6-2.1-1.5v-.2H7V12.7c.1 2.3 2 3.4 4.7 3.4s4.7-1.5 4.7-3.6c0-1.5-.9-2.4-2.5-2.8l-3.3-.8zm1 6.9c2.7 0 4.4-1.5 4.4-3.3 0-.7-.2-1.2-.5-1.6-.3-.4-.9-.7-1.6-.9l-3.4-.8c-.3 0-.6-.2-.8-.4-.2-.2-.3-.5-.3-.9 0-.5.3-.9.7-1.1.4-.3.9-.4 1.5-.4.7 0 1.2.1 1.6.5.3.3.5.7.5 1h1.9c0-.8-.5-1.5-1-2-.8-.5-1.8-.9-3-.9s-2.2.3-3 .9c-.6.5-1 1.3-1 2.3 0 .7.1 1.3.5 1.6a3.2 3.2 0 001.7.9l3.2.7c.4.1.7.3.9.5.2.2.3.5.3.8 0 .6-.3 1-.8 1.3-.4.3-1 .4-1.7.4s-1.3-.1-1.7-.5c-.5-.2-.7-.7-.8-1.2H7.4c0 1 .5 1.7 1.1 2.2.8.6 1.9.8 3.2.9zM5.6 19.7l-.1-1-.1-1h.2A151.5 151.5 0 0111 17h7v2.1h-7a40.2 40.2 0 00-5.2.5h-.1z" fill="#1B1B20" />
+                                                    </svg>
+                                                </span></a></li>
+                                        <li><a href="updates.html" class="c-menu__item"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 5.9v13.3a1.8 1.8 0 01-3.4.6l-2.2-6.1m0 0A4 4 0 017 6h1.8C13 6 16.5 4.8 18 3v14c-1.5-1.8-5-3-9.2-3H7a4 4 0 01-1.6-.3zM18 13a3 3 0 000-6v6z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Product Updates</a></li>
+                                        <li class="v--only-desktop"><a href="marketplace/partners.html" class="c-menu__item"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M17 20h5v-2a3 3 0 00-5.4-1.9M17 20l-.4-3.9M17 20H7m10 0v-2a5 5 0 00-.4-1.9m0 0a5 5 0 00-9.2 0M7 20H2v-2a3 3 0 015.4-1.9M7 20l.4-3.9M7 20v-2c0-.7.1-1.3.4-1.9M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Partners Marketplace</a></li>
+                                        <li><a href="developers-sub/index.html" class="c-menu__item" target="_blank" rel="noopener"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>API & Developers</a></li>
+                                        <li><a href="partners-sub/index.html" class="c-menu__item v--no-border" target="_blank" rel="noopener"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 3a1 1 0 012 0l1.5 4.6a1 1 0 001 .7h4.8A1 1 0 0121 10L17 13a1 1 0 00-.3 1.1l1.5 4.7a1 1 0 01-1.5 1.1l-4-2.9a1 1 0 00-1.2 0l-4 2.9A1 1 0 016 18.8L7.4 14a1 1 0 00-.3-1.1L3 10a1 1 0 01.6-1.8h4.9a1 1 0 001-.7L11 2.9v0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>Partner Program</a></li>
+                                        <li class="v--only-desktop"><a href="status-sub/index.html" class="c-menu__item" target="_blank" rel="noopener"><span class="c-menu__icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg></span>System Status</a></li>
+                                    </ul>
+                                </div>
+                                <div class="v--only-desktop">
+                                    <p class="c-menu__header">Learn</p>
+                                    <ul>
+                                        <li><a href="success.html" class="c-menu__item" target="_blank"><span class="c-menu__icon u--mr-xs"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M0 2.7C0 1.2 1.2 0 2.7 0h18.6C22.8 0 24 1.2 24 2.7v18.6c0 1.5-1.2 2.7-2.7 2.7H2.7A2.7 2.7 0 010 21.3V2.7z" fill="#FFD000" />
+                                                        <path d="M7 12.6v-.2h2.6v.2c0 .9.8 1.5 2.1 1.5s2.1-.5 2.1-1.4c0-.5-.2-.8-.9-1L9.7 11c-1.6-.4-2.5-1.2-2.5-2.8C7.2 6 9 4.7 11.6 4.7c2.6 0 4.3 1.3 4.3 3.5v.1h-2.5v-.2c0-.8-.5-1.4-1.8-1.4-1.1 0-1.8.5-1.8 1.2 0 .6.3.8.8 1l3.3.8c1.6.4 2.5 1.3 2.5 2.8 0 2-2 3.6-4.7 3.6S7 14.9 7 12.6z" fill="#1B1B20" />
+                                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.6 8.9c-.5-.2-.8-.4-.8-1 0-.7.7-1.2 1.8-1.2 1.3 0 1.8.6 1.8 1.4v.2h2.5v-.1V8c-.1-2-1.8-3.3-4.3-3.3C9 4.7 7.2 6 7.2 8.2c0 1.6.9 2.4 2.5 2.8l3.2.8c.7.1 1 .4 1 1 0 .8-1 1.3-2.2 1.3-1.3 0-2.1-.6-2.1-1.5v-.2H7V12.7c.1 2.3 2 3.4 4.7 3.4s4.7-1.5 4.7-3.6c0-1.5-.9-2.4-2.5-2.8l-3.3-.8zm1 6.9c2.7 0 4.4-1.5 4.4-3.3 0-.7-.2-1.2-.5-1.6-.3-.4-.9-.7-1.6-.9l-3.4-.8c-.3 0-.6-.2-.8-.4-.2-.2-.3-.5-.3-.9 0-.5.3-.9.7-1.1.4-.3.9-.4 1.5-.4.7 0 1.2.1 1.6.5.3.3.5.7.5 1h1.9c0-.8-.5-1.5-1-2-.8-.5-1.8-.9-3-.9s-2.2.3-3 .9c-.6.5-1 1.3-1 2.3 0 .7.1 1.3.5 1.6a3.2 3.2 0 001.7.9l3.2.7c.4.1.7.3.9.5.2.2.3.5.3.8 0 .6-.3 1-.8 1.3-.4.3-1 .4-1.7.4s-1.3-.1-1.7-.5c-.5-.2-.7-.7-.8-1.2H7.4c0 1 .5 1.7 1.1 2.2.8.6 1.9.8 3.2.9zM5.6 19.7l-.1-1-.1-1h.2A151.5 151.5 0 0111 17h7v2.1h-7a40.2 40.2 0 00-5.2.5h-.1z" fill="#1B1B20" />
+                                                    </svg>
+                                                </span></a></li>
+                                        <li><a href="customer-service-report.html" class="c-menu__item">Customer Service Report<br><small>Discover the latest data</small></a></li>
+                                        <li><a href="benchmark.html" class="c-menu__item">Local Benchmark<br><small>Compare your results</small></a></li>
+                                        <li><a href="webinars.html" class="c-menu__item">Webinars<br></a></li>
+                                        <li><a href="privacy-policy-generator.html" class="c-menu__item">Privacy Policy Generator<br><small>Become GDPR compliant</small></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="v--only-mobile b--u-p-3 u-mt-auto u-mb-0">
+<!--                    <form action="accounts-sub/signup.html" method="GET" data-controller="signup" data-action="signup#submit" class="o-input-group b--u-mb-3">-->
+                        <input type="email" name="email" class="" style="border-color: #767680;" data-signup-target="email" placeholder="Enter your email" aria-label="Business Email" required>
+                        <input type="hidden" name="source_id" value="header_cta">
+                        <input type="hidden" name="source_url" value="https://www.ecobots.ai/">
+                        <input type="hidden" name="source_type" value="website">
+                        <div class="o-input-group__append">
+                            <a class="c-btn v--signup" href="https://chat.ecobots.ai">Try it now</a>
+                        </div>
+<!--                    </form>-->
+                    <p class="u-text-center"><a href="https://chat.ecobots.ai/" data-controller="track" data-track-category="Log In Button" data-track-action="Top Nav" data-track-label="Redirect to Accounts" data-action="track#send">Already a customer? <span class="u-text-primary">Log in</span></a></p>
+                </div>
+            </nav>
+            <div class="c-navbar__actions" data-logged-in-target="hide">
+<!--                <a href="https://chat.ecobots.ai/" class="btn_menu_login c-btn v--sm v--secondary hover:u-bg-gray-900 hover:u-border-gray-900 hover:u-text-black u-border-white" data-controller="track" data-track-category="Log In Button" data-track-action="Top Nav" data-track-label="Redirect to Accounts" data-action="track#send">Log in</a>-->
+                <div class="lc-signup-expandable" data-controller="expandable-signup">
+<!--                    <form action="accounts-sub/signup.html" method="GET" data-controller="signup" data-action="signup#submit" data-expandable-signup-target="form">-->
+                        <div class="o-input-group">
+                            <div class="o-input-group__append">
+                                <a href="https://chat.ecobots.ai" class="c-btn v--signup v--sm" style="border: none; background: transparent">Try it now</a>
+                            </div>
+                        </div>
+<!--                    </form>-->
+                    <a href="https://chat.ecobots.ai" class="c-btn v--secondary hover:u-bg-signup hover:u-border-signup v--sm" data-controller="track" data-track-category="Signup" data-track-action="Signup Redirect" data-action="track#send" data-expandable-signup-target="button">Try it now</a>
+                </div>
+            </div>
+            <div class="c-navbar__actions" data-logged-in-target="show">
+                <a href="https://chat.ecobots.ai/" class="c-btn v--secondary v--sm u-border-white hover:u-bg-gray-900 hover:u-border-gray-900 hover:u-text-black" data-controller="track" data-track-category="Log In Button" data-track-action="Top Nav" data-track-label="Instant Login" data-action="track#send">Go to app</a>
+                <a href="https://chat.ecobots.ai/" class="c-btn v--signup v--sm" data-controller="track" data-track-category="Personalised Web" data-track-action="Upgrade (Header)" data-action="track#send">Upgrade</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="o-wrapper">
+        <div class="o-wrapper-xy">
+            <section class="o-container-xl b--u-pb-6 b--md:u-pb-8 b--lg:u-pb-12">
+                <div class="u-flex u-flex-wrap u-justify-center u-items-center md:u-items-start">
+                    <div class="u-w-full lg:u-basis-5 u-mx-auto lg:u-ml-0 b--u-mb-4 lg:u-mb-0 b--u-pt-4 b--md:u-pt-8 b--lg:u-pt-12">
+                        <div class="u-text-center lg:u-text-left">
+                            <h1 class="b--u-text-4xl b--u-mb-3">AI for <br> <span class="u-text-mark">Ecology!</span></h1>
+                            <p class="b--u-text-lg u-maxw-8 u-mx-auto lg:u-ml-0 b--u-mb-4 b--lg:u-mb-6">A ChatBot guiding you in your ecological engagement. Get active in your local town and get funding for a national green initiative!</p>
+                            <div class="u-w-full u-mx-auto lg:u-ml-0 b--lg:u-mb-6">
+<!--                                <form action="accounts-sub/signup.html" method="GET" data-controller="signup track" data-action="track#send" data-track-category="Signup" data-track-action="Signup Redirect" data-track-label="">-->
+                                    <div class="u-maxw-6 u-mx-auto u-flex u-flex-col sm:u-flex-row">
+                                        <!--                <input type="email" name="email" class="u-mr-xs u-mb-xs sm:u-mb-0" style="min-width: 14rem; height:58px;" data-signup-target="email" data-expandable-signup-target="input" placeholder="Enter your business email" aria-label="Business Email" required>-->
+                                        <input type="hidden" name="source_id" value="Home-animation">
+                                        <input type="hidden" name="source_url" value="https://www.ecobots.ai/">
+                                        <input type="hidden" name="source_type" value="website">
+<!--                                        <a class="c-btn v--signup" style="height:58px; align-items: center; display: flex; justify-content: center;" href="https://chat.ecobots.ai">Sign up free</a>-->
+                                        <div style="display: flex; margin: auto; width: 100%;">
+<!--                                            <form>-->
+                                                <textarea id="demo_question_text" class="v--signup" style="height:58px;align-items: center;display: flex;justify-content: center;margin: auto;    width: calc(100% - 68px);resize: none;outline: #157f4e; padding: 1rem 0.75rem;" href="https://chat.ecobots.ai" placeholder="Ask me a question"></textarea>
+                                                <button id="demo_question_button" type="submit" class="pointer" style="height:58px;align-items: center;display: flex;justify-content: center;width: 58px;margin: auto;background: #157f4e;/* border-radius: 10px; */border-radius: 0.25rem;color: white;font-size: 20px;cursor: pointer" href="https://chat.ecobots.ai">
+                                                    <div id="send-button">
+                                                        <i class="fa-regular fa-paper-plane-top"></i>
+                                                    </div>
+                                                </button>
+<!--                                            </form>-->
+                                        </div>
+                                    </div>
+<!--                                </form>-->
+                                <p class="u-Mt-2xs u-mb-0 u-text-p7 u-text-center lg:u-text-left b--u-mb-8">
+                                    <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                            <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        Free to use
+                                    </span>
+                                    <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                            <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        Sustainable
+                                    </span>
+                                    <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                            <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                            </path>
+                                        </svg>
+                                        Over 10M+ Data points
+                                    </span>
+                                </p>
+                            </div>
+                            <div class="u-w-full u-flex u-flex-col lg:u-flex-row u-justify-start u-items-center">
+                                <p class="b--u-text-xl u-text-gray-200 b--u-mb-2 lg:u-mb-0">
+                                    Powered by data from:
+                                </p>
+                                <img class="u-maxw-4 b--lg:u-ml-6" src="assets/images/companies.6e0fe351605d1f1344408894defb929e887e3f228037dab0d6f19abb858e9a34.png" srcset="assets/images/companies_huf5a8460ee35e2e2e56c3937ed66d5d30_5828_360x0_resize_lanczos_3.png 360w, assets/images/companies_huf5a8460ee35e2e2e56c3937ed66d5d30_5828_454x0_resize_lanczos_3.png 454w, assets/images/companies_huf5a8460ee35e2e2e56c3937ed66d5d30_5828_548x0_resize_lanczos_3.png 548w, assets/images/companies_huf5a8460ee35e2e2e56c3937ed66d5d30_5828_642x0_resize_lanczos_3.png 642w, assets/images/companies_huf5a8460ee35e2e2e56c3937ed66d5d30_5828_736x0_resize_lanczos_3.png 736w" width="352" height="34" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-controller="lazyplay" class="u-relative u-hidden md:u-block o-feature__zoom u-maxw-7" style="max-width:736px;max-height:640px;">
+                        <video preload="none" loop playsinline autoplay muted src="assets/videos/ecobots2.mp4" width="736" height="640" style="--aspect-ratio: 736/640;" title="" data-lazyplay-target="video" poster="assets/images/ecobots-app-mobile.12046e0d87a7a0871e42304c1162192292cc3e686544424f7d15dec29e92daa2.png" ></video>
+                        
+                    </div>
+                    <img class="u-block md:u-hidden u-maxw-6 u-mx-auto" src="assets/images/ecobots-app-mobile.12046e0d87a7a0871e42304c1162192292cc3e686544424f7d15dec29e92daa2.png" srcset="assets/images/ecobots-app-mobile_hue6b5c5031ca89f414191816fdb90adfb_212093_360x0_resize_q75_lanczos.png 360w, assets/images/ecobots-app-mobile_hue6b5c5031ca89f414191816fdb90adfb_212093_590x0_resize_q75_lanczos.png 590w, assets/images/ecobots-app-mobile_hue6b5c5031ca89f414191816fdb90adfb_212093_820x0_resize_q75_lanczos.png 820w, assets/images/ecobots-app-mobile_hue6b5c5031ca89f414191816fdb90adfb_212093_1050x0_resize_q75_lanczos.png 1050w, assets/images/ecobots-app-mobile_hue6b5c5031ca89f414191816fdb90adfb_212093_1280x0_resize_q75_lanczos.png 1280w" width="445" height="445" loading="lazy">
+                </div>
+            </section>
+
+
+
+            <div data-controller="homepage-scrollmagic">
+                
+                <section>
+                    <div class="b--u-mt-8">
+                        <div style="overflow: hidden;">
+                            <svg preserveAspectRatio="none" viewBox="0 0 1440 36" class="u-block" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; margin: -1px 0;">
+                                <rect width="100%" height="100%" fill="#fff"></rect>
+                                <path d="M1440 36V8.2s-105.6-1.2-160.7-6a877 877 0 00-150.5 2.5c-42.1 3.9-140 15-223 15C754 19.6 700.3 6.8 548.8 7c-143.7 0-273.4 11.5-350 12.6-76.6 1.2-198.8 0-198.8 0V36h1440z" fill="#F5F6F8"></path>
+                            </svg>
+                        </div>
+
+                        <div class="u-bg-gray-900 b--u-py-6 b--md:u-py-12">
+                            <div class="u-maxw-12 u-mx-auto">
+                                <div class="o-columns v--two u-items-center">
+
+                                    <img class="u-maxw-6 u-mx-auto" src="assets/images/ecobots_planting_trees.png" srcset="assets/images/ecobots_planting_trees.png 360w, assets/images/ecobots_planting_trees.png 542w, assets/images/ecobots_planting_trees.png 724w, assets/images/ecobots_planting_trees.png 906w, assets/images/ecobots_planting_trees.png 1088w" alt="Sarah Gibbs from Grove City College" width="544" height="542" loading="lazy">
+
+
+
+                                    <div class="b--u-px-2">
+
+
+                                        <img class="u-ml-0 b--u-mb-4" src="assets/data_logos/un.png" alt="Grove City College logo" width="180" height="50" loading="lazy" style="max-width: 180px;">
+
+                                        <div>
+                                            <blockquote class="b--u-text-xl b--u-mb-3">In cooperation with the UN, we are part of an initiative teaching companies and institutions around the world <span class="u-text-highlight v--accent v--active">how to use AI &amp; tech</span> for environmental purposes.</blockquote>
+<!--
+                                            <p class="b--u-mb-4 b--u-text-base u-text-black-600 u-text-normal">
+                                                <strong>Sarah Gibbs</strong>
+                                                , Director of Admissions at Grove City College
+                                            </p>
+-->
+                                        </div>
+                                        <div class="b--u-mb-4 b--u-mt-2">
+<!--                                            <a href="https://chat.ecobots.ai" class="c-link b--u-text-base b--u-text-bold">Join Us and become a volunteer</a>-->
+                                            <p href="https://chat.ecobots.ai" class="">Join Us and become a volunteer</p>
+                                        </div>
+                                        <div class="o-columns v--two lc--gap-row-1 b--u-pt-4 u-border-t">
+                                            <div>
+                                                <p class="b--u-text-lg b--u-text-bold u-mb-0">11</p>
+                                                <p>new volunteers this month</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="overflow: hidden;">
+                            <svg preserveAspectRatio="none" viewBox="0 0 1440 36" class="u-block" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; margin: -1px 0;">
+                                <rect width="100%" height="100%" fill="#F5F6F8"></rect>
+                                <path d="M1440 36V8.2s-105.6-1.2-160.7-6a877 877 0 00-150.5 2.5c-42.1 3.9-140 15-223 15C754 19.6 700.3 6.8 548.8 7c-143.7 0-273.4 11.5-350 12.6-76.6 1.2-198.8 0-198.8 0V36h1440z" fill="#fff"></path>
+                            </svg>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="b--u-mt-8 b--md:u-mt-12">
+                    <div>
+                        <div class="o-container-xl o-columns v--three u-text-center b--u-py-8">
+                            <div>
+
+                                <img class="u-w-auto b--u-mb-3 b--md:u-mb-6" src="assets/illustrations/illustration1.svg" alt="Illustration of the flying envelopes" width="225" height="210" loading="lazy">
+
+                                <p class="b--u-text-lg">
+                                    <span class="b--u-text-3xl u-text-black">Daily</span>
+                                    <br>Environmental News
+                                </p>
+                            </div>
+                            <div>
+
+                                <img class="u-w-auto b--u-mb-3 b--md:u-mb-6" src="assets/illustrations/illustration2.svg" alt="Illustration of the hand heart gesture" width="225" height="210" loading="lazy">
+
+                                <p class="b--u-text-lg">
+                                    <span class="b--u-text-3xl">Funding</span>
+                                    <br>For your ecological Project
+                                </p>
+                            </div>
+                            <div>
+
+
+
+
+
+
+
+
+
+                                <img class="u-w-auto b--u-mb-3 b--md:u-mb-6" src="assets/illustrations/illustration3.svg" alt="Illustration of a hand holding a smartphone" width="225" height="210" loading="lazy">
+
+                                <p class="b--u-text-lg">
+                                    <span class="b--u-text-3xl">Routine</span>
+                                    <br>Sustainability Plan
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="b--u-mt-4 b--md:u-mt-8" style="
+    display: none;
+">
+                            <div style="overflow: hidden;">
+                                <svg preserveAspectRatio="none" viewBox="0 0 1440 36" class="u-block" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; margin: -1px 0;">
+                                    <rect width="100%" height="100%" fill="#fff"></rect>
+                                    <path d="M1440 36V8.2s-105.6-1.2-160.7-6a877 877 0 00-150.5 2.5c-42.1 3.9-140 15-223 15C754 19.6 700.3 6.8 548.8 7c-143.7 0-273.4 11.5-350 12.6-76.6 1.2-198.8 0-198.8 0V36h1440z" fill="#F5F6F8"></path>
+                                </svg>
+                            </div>
+
+                            <div class="u-relative u-bg-gray-900">
+                                <div class="o-container b--u-py-6 b--md:u-py-12">
+                                    <div class="u-flex u-flex-col md:u-flex-row u-justify-center u-items-center u-text-center md:u-text-left md:u-justify-between">
+                                        <div class="u-maxw-6 b--u-mb-4 md:u-mb-0">
+                                            <h4 class="b--u-text-2xl b--u-mb-1 b--u-px-1 u-rounded u--ml-xs">Get more applications</h4>
+                                        </div>
+                                        <div class="u-maxw-6 md:u-basis-6">
+<!--                                            <form action="https://ecobots.ai" method="GET" data-controller="signup track" data-action="track#send" data-track-category="Signup" data-track-action="Signup Redirect" data-track-label="" data-hs-cf-bound="true">-->
+                                                <div class="u-maxw-6 u-mx-auto u-flex u-flex-col sm:u-flex-row">
+                                                    <input type="email" name="email" class="u-mr-xs u-mb-xs sm:u-mb-0" style="min-width: 14rem; height:58px;" data-signup-target="email" data-expandable-signup-target="input" placeholder="Enter your business email" aria-label="Business Email" required="">
+                                                    <input type="hidden" name="source_id" value="get-more-applications">
+                                                    <input type="hidden" name="source_url" value="https://www.ecobots.ai/reveal__education/">
+                                                    <input type="hidden" name="source_type" value="website">
+                                                    <a href="https://chat.ecobots.ai" class="c-btn v--signup" style="height:58px;">Try it now</a>
+                                                </div>
+<!--                                            </form>-->
+
+                                            <p class="u-Mt-2xs u-mb-0 u-text-p8 u-text-center md:u-text-left">
+
+                                                <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                                        <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                                        </path>
+                                                    </svg>
+                                                    Easy setup
+                                                </span>
+
+
+                                                <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                                        <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                                        </path>
+                                                    </svg>
+                                                    No tech skills needed
+                                                </span>
+
+
+                                                <span class="b--u-mr-2 u-inline-block u-pb-0">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" class="b--u-mr-1">
+                                                        <path d="M9.1.3L4 5.4l-2-2c-.3-.3-.7-.4-1-.3S0 3.5 0 4c0 .4 0 .8.3 1l2.8 2.8c.2.2.5.3.8.3s.6-.1.8-.3l6-5.9c.3-.2.4-.6.3-1a1 1 0 0 0-.8-.8c-.4 0-.8 0-1 .3z" fill="currentColor">
+                                                        </path>
+                                                    </svg>
+                                                    24/7 support
+                                                </span>
+
+
+                                            </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="overflow: hidden;">
+                                <svg preserveAspectRatio="none" viewBox="0 0 1440 36" class="u-block" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: auto; margin: -1px 0;">
+                                    <rect width="100%" height="100%" fill="#F5F6F8"></rect>
+                                    <path d="M1440 36V8.2s-105.6-1.2-160.7-6a877 877 0 00-150.5 2.5c-42.1 3.9-140 15-223 15C754 19.6 700.3 6.8 548.8 7c-143.7 0-273.4 11.5-350 12.6-76.6 1.2-198.8 0-198.8 0V36h1440z" fill="#fff"></path>
+                                </svg>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <section class="o-container b--u-pt-8 b--u-pb-8 b--md:u-py-12 b--lg:u-py-20" style="display: none;">
+                    <div class="o-feature">
+                        <div>
+                            <h2 class="b--u-text-3xl b--u-mb-4 b--md:u-mb-8">Balance AI automation and the human touch</h2>
+                            <ul class="c-list v--bold v--tick b--u-mb-4 b--md:u-mb-8 t-f-scrollmagic">
+                                <li class="c-list__item b--u-text-lg b--u-mb-3 t-hp-fade">
+                                    Let
+                                    <b>chatbots</b>
+                                    generate leads, create help tickets, and chat across channels
+                                </li>
+                                <li class="c-list__item b--u-text-lg b--u-mb-3 t-hp-fade">
+                                    Greet customers and quickly route chats with the
+                                    <b>help of AI</b>
+                                </li>
+                                <li class="c-list__item b--u-text-lg u-mb-0 t-hp-fade">
+                                    Automatically segment visitors based on what they do on your site, so you can
+                                    <b>better meet customer needs</b>
+                                </li>
+                            </ul>
+                            <a href="/chatbot/" class="c-link b--u-text-lg b--u-text-bold" data-controller="track" data-track-category="Interactions" data-track-action="Link Click" data-track-label="Section Automate" data-action="track#send">Meet ChatBot</a>
+                        </div>
+
+                        <div>
+                            <div>
+
+
+
+
+
+
+
+
+
+
+                                <img class="u-maxw-6 u-hidden md:u-block" src="/balance-ai__education.1008bfee2cfc42215840ce2cab615d782abbc1bce4cf5a36b27f0992fac82a9c.png" srcset="/balance-ai__education_hue1fda43d1f52eb3a196a72592becbdff_69125_360x0_resize_lanczos_3.png 360w, /balance-ai__education_hue1fda43d1f52eb3a196a72592becbdff_69125_542x0_resize_lanczos_3.png 542w, /balance-ai__education_hue1fda43d1f52eb3a196a72592becbdff_69125_724x0_resize_lanczos_3.png 724w, /balance-ai__education_hue1fda43d1f52eb3a196a72592becbdff_69125_906x0_resize_lanczos_3.png 906w, /balance-ai__education_hue1fda43d1f52eb3a196a72592becbdff_69125_1088x0_resize_lanczos_3.png 1088w" width="544" height="640" loading="lazy">
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+
+
+            <section class="u-bg-gray-900">
+                <div class="o-container">
+                    <div class="o-feature v--inverse u-items-start">
+                        <div class="b--u-pt-8 b--md:u-pt-20 b--lg:u-pt-30">
+                            <h3 class="u-text-p2 u-Mb-md">Our bot was trained on data of more than <span class='u-rounded u-bg-accent u-px-sm'>30+ entities</span></h3>
+                            <p class="b--u-text-lg b--u-mb-4">Thank to our partners we were able to create ecobots for free and let users teach themselves and others freely about ecology.</p>
+
+                        </div>
+                        <div class="t-hp-integrations-section__vertical u-hidden md:u-block">
+                            <div class="u-maxw-5 u-mx-auto u-flex u-flex-row u-justify-around t-hp-integrations">
+                                <div class="b--u-pt-4">
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="chatbot" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/WWF_logo.svg" alt="WWF" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">WWF</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="wordpress" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/ClimeCo_Corporation.svg" alt="ClimeCo Corporation logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">ClimeCo Corporation</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="messenger" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Cool_Effect.svg" alt="Cool Effect logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Cool Effect</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="ads" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/EarthEnable.svg" alt="EarthEnable logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">EarthEnable</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="teamviewer" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/EcoEnclose.svg" alt="EcoEnclose logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">EcoEnclose</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="knowledgebase" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecological_Building_Systems.svg" alt="Ecological Building Systems logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecological Building Systems</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="bigcommerce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecosia.svg" alt="Ecosia logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecosia</p>
+                                    </div>
+                                </div>
+                                <div class="b--u-pt-4">
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="mailchimp" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/European_Commission.svg" alt="European_Commission logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">European Commission</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="shopify" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ormat_Technologies.svg" alt="Ormat_Technologies logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ormat Technologies</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="hubspot" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/project_aware.svg" alt="project_aware logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Project Aware</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="dropbox" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/ReVision_Energy.svg" alt="ReVision_Energy logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">ReVision Energy</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="pipedrive" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Sonnen.svg" alt="Sonnen logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Sonnen</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="whatsapp" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/TerraCycle.svg" alt="TerraCycle logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">TerraCycle</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="woocommerce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/WCS.svg" alt="WCS logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">WCS</p>
+                                    </div>
+                                    
+                                </div>
+                                <div class="b--u-pt-4">
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="chatbot" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Johns-Hopkins-University.svg" alt="Johns-Hopkins-University" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Johns Hopkins University</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="wordpress" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecovative_Design.svg" alt="Ecovative Design logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecovative Design</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="messenger" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Enphase_Energy.svg" alt="Enphase Energy logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Enphase Energy</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="ads" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Everlane.svg" alt="Everlane" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Everlane</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="teamviewer" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/First_Solar.svg" alt="First Solar logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">First Solar</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="knowledgebase" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Green_Alliance.svg" alt="Green Alliance logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Green Alliance</p>
+                                    </div>
+                                    <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3" data-id="bigcommerce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/NRDC.svg" alt="NRDC logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">NRDC</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="t-hp-integrations-section__horyzontal u-block md:u-hidden">
+                    <div class="u-flex u-flex-row b--u-px-3">
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="chatbot" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/WWF_logo.svg" alt="WWF" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                            <p class="b--u-text-2xs u-text-black u-mb-0">WWF</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="wordpress" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/ClimeCo_Corporation.svg" alt="ClimeCo Corporation logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                            <p class="b--u-text-2xs u-text-black u-mb-0">ClimeCo Corporation</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="messenger" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Cool_Effect.svg" alt="Cool Effect logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                            <p class="b--u-text-2xs u-text-black u-mb-0">Cool Effect</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="ads" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/EarthEnable.svg" alt="EarthEnable logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">EarthEnable</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="knowledgebase" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/EcoEnclose.svg" alt="EcoEnclose logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">EcoEnclose</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="bigcommerce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecological_Building_Systems.svg" alt="Ecological Building Systems logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecological Building Systems</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="mailchimp" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecosia.svg" alt="Ecosia logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecosia</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="shopify" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Organigram.svg" alt="Organigram logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Organigram</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="hubspot" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ormat_Technologies.svg" alt="Ormat_Technologies logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ormat Technologies</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="woocommerce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/project_aware.svg" alt="project_aware logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Project Aware</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="dropbox" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/ReVision_Energy.svg" alt="ReVision_Energy logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">ReVision Energy</p>
+                        </div>
+                    </div>
+                    <div class="u-flex u-flex-row b--u-px-3">
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="analytics" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/European_Commission.svg" alt="European_Commission logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">European Commission</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="whatsapp" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Johns-Hopkins-University.svg" alt="Johns-Hopkins-University logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Johns Hopkins University</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="teamviewer" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/WCS.svg" alt="WCS logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">WCS</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="zapier" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecotelligent_Homes.svg" alt="Ecotelligent Homes logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecotelligent Homes</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="salesforce" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Ecovative_Design.svg" alt="Ecovative Design logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Ecovative Design</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="getresponse" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Enphase_Energy.svg" alt="Enphase Energy logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Enphase Energy</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="zendesk" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Everlane.svg" alt="Everlane" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Everlane</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="pipedrive" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/First_Solar.svg" alt="First Solar logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">First Solar</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="helpdesk" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/Green_Alliance.svg" alt="Green Alliance logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">Green Alliance</p>
+                        </div>
+                        <div class="t-hp-integrations-box u-bg-white u-rounded u-hover-lift u-hover-pointer b--u-mb-3 u-text-center b--u-py-3 b--u-px-3 b--u-mr-2" data-id="twilio" onclick="showModal();showModalContent(this.dataset.id)"><img src="logos/integrations2/NRDC.svg" alt="NRDC logo" width="64" height="64" class="t-hp-integrations-logo b--u-mb-2" loading="lazy">
+                                        <p class="b--u-text-2xs u-text-black u-mb-0">NRDC</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- end of Integrations -->
+
+
+            <section class="o-container b--u-my-12">
+                <div class="o-feature">
+                    <div>
+
+                        <img class="u-w-auto u-ml-0 b--u-mb-3" src="/benchmark/icon_summary.b0f59c94c4519dbeda101e9ab73586c7d70b5a6400a64e8720cf64037db232d8.svg" style="display: none;">
+
+                        <h3 class="u-text-p2 u-Mb-md">Funding thanks to EcoBots</h3>
+                        <p class="b--u-text-base b--u-mb-4">EcoBots is featuring options for NGOs, companies, and also individuals who want to benefit the environment. Explain your project to EcoBots, and see what funding opportunities are available to you!</p>
+                        <a href="https://chat.ecobots.ai" class="c-btn v--signup v--sm b--u-mx-0.5" data-controller="track" data-track-category="Signup" data-track-action="Signup Redirect" data-action="track#send">Try it now</a>
+
+                    </div>
+                    <div style="display: none">
+                        <img class="o-feature__zoom u--ml-2xl" src="assets/illustrations/illustration4.png" srcset="assets/illustrations/illustration4.png 360w, assets/illustrations/illustration4.png 497w, assets/illustrations/illustration4.png 634w, assets/illustrations/illustration4.png 771w, assets/illustrations/illustration4.png 908w">
+
+                    </div>
+                    <div>
+            
+              
+                <div class="c-faq__entry u-bg-white u-rounded-md u-shadow u-hover-lift b--u-mb-2" data-controller="click-focus">
+                    <buttons data-action="click-focus#toggleFocusClass" class="c-faq__entry-question b--u-px-2 b--u-pr-8 b--u-py-2 u-w-full u-block u-text-left u-bg-white u-rounded-md">How does EcoBots help the environment?</buttons>
+                    <p class="c-faq__entry-answer b--u-text-sm b--u-px-2 b--u-pr-4 u-overflow-auto">EcoBots develops artificial intelligence models for ecology. We are currently featuring 3 different ai models: EcoTeacher, EcoFunding and a custom model for our users to use ecobots with their own data. <br><br>
+                        1. EcoTeacher is our default conversational model that teaches you about ecological steps to take in your daily life and about current environmental concerns. <br><br>
+                        2. Ecofunding is a custom model for user within the EU to apply to ecological funing programs proposed by the EU, by their county, region, or city. <br><br> 
+                        3. Our custom model is made for users and companies that want to use the ecobots models with their own data.</p>
+                </div>
+                
+                  <div class="c-faq__entry u-bg-white u-rounded-md u-shadow u-hover-lift b--u-mb-2" data-controller="click-focus">
+                    <buttons data-action="click-focus#toggleFocusClass" class="c-faq__entry-question b--u-px-2 b--u-pr-8 b--u-py-2 u-w-full u-block u-text-left u-bg-white u-rounded-md">How can I get funding thanks to Ecobots?</buttons>
+                    <p class="c-faq__entry-answer b--u-text-sm b--u-px-2 b--u-pr-4 u-overflow-auto">EcoBots proposes different AI models one of them being the EcoFunding. This model allows users to enter information about their current project, company, organization and for the model to give information about the open grants wihtin the EU, or their respective country, region or city. This applies to ecological companies, software, hardware, tech, farmers, and many more types of companies.</p>
+                  </div>
+                        
+                
+                  <div class="c-faq__entry u-bg-white u-rounded-md u-shadow u-hover-lift b--u-mb-2" data-controller="click-focus">
+                    <buttons data-action="click-focus#toggleFocusClass" class="c-faq__entry-question b--u-px-2 b--u-pr-8 b--u-py-2 u-w-full u-block u-text-left u-bg-white u-rounded-md">What types of funding can I get?</buttons>
+                    <p class="c-faq__entry-answer b--u-text-sm b--u-px-2 b--u-pr-4 u-overflow-auto">EcoBots gives information about funding for: Agriculture & Rural Development, Culture & Media, Research & Innovation, Environment & Energy, Transport & Infrastructure, Regional & Urban Development, Employment & Social Innovation, Digital & Technology, Education & Training, Humanitarian Aid & Civil Protection, Health, Justice & Home Affairs, Youth, Fisheries & Maritime Affairs, External Relations & Foreign Affairs, Development & Cooperation, Enterprise & Industry.</p>
+                  </div>
+                
+                
+                  <div class="c-faq__entry u-bg-white u-rounded-md u-shadow u-hover-lift b--u-mb-2" data-controller="click-focus">
+                    <buttons data-action="click-focus#toggleFocusClass" class="c-faq__entry-question b--u-px-2 b--u-pr-8 b--u-py-2 u-w-full u-block u-text-left u-bg-white u-rounded-md">What's the difference between EcoBots, EcoTeacher and EcoFunding</buttons>
+                    <p class="c-faq__entry-answer b--u-text-sm b--u-px-2 b--u-pr-4 u-overflow-auto">EcoBots is the name of our association. We are a group of people who develop AI models for ecology. <br><br>
+                        EcoTeacher is a model we developed and that is teacher users about ecological issues and gives plans on actions to take to fight the ecological problems.<br><br>
+                        EcoFunding is another model of ours that is showing users within the EU what grants and funding opportunities they have. 
+                      </p>
+                  </div>
+
+                
+                  <div class="c-faq__entry u-bg-white u-rounded-md u-shadow u-hover-lift b--u-mb-2" data-controller="click-focus">
+                    <buttons data-action="click-focus#toggleFocusClass" class="c-faq__entry-question b--u-px-2 b--u-pr-8 b--u-py-2 u-w-full u-block u-text-left u-bg-white u-rounded-md">Can I use EcoBots with my personal/company data?</buttons>
+                    <p class="c-faq__entry-answer b--u-text-sm b--u-px-2 b--u-pr-4 u-overflow-auto">Ecobots features an AI model that allows users to use the other with their custom data. You can use this feature by getting in touch with the Ecobots team. You can do so by writing a message to contact.at.ecobots.ai</p>
+                  </div>
+                
+              
+            
+              
+            
+          </div>
+                </div>
+            </section>
+
+
+            <footer class=" u-bg-gray-900 b--u-pt-1">
+
+                <div class="o-container-xl u-text-gray-400">
+                    <div class="b--u-py-3 copyright">
+                        <p class="b--u-text-2xs u-mb-0 u-pb-0" style="color: inherit;">Copyright &copy; 2023 EcoBots, Inc. All rights reserved.</p>
+                        
+                        <div class="privacyLinks">
+                            <a class="b--u-text-2xs u-mb-0 u-pb-0 b--u-text-bold" style="color: inherit; margin-right: 5px;" href="/privacy-policy/" >Privacy Policy</a>
+                            <a class="b--u-text-2xs u-mb-0 u-pb-0 b--u-text-bold" style="color: inherit; margin-left: 5px;" href="/terms-and-services/">Terms of Services</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </footer>
+
+        </div>
+        </div>
+
+<!--        <script async="" defer="" src="assets/dist/js/main.b229fe0546a084e70c64010ed8feab3effb5cd62e78341b4b7b0da3b17ec187f.js"></script>-->
+
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const buttons = document.querySelectorAll('[data-action="click-focus#toggleFocusClass"]');
+
+                buttons.forEach(button => {
+                    button.addEventListener('click', function() {
+                        const parentDiv = button.closest('div');
+                        if(parentDiv) {
+                            parentDiv.classList.toggle('v--focused');
+                        }
+                    });
+                });
+            });
+        </script>
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+        <script>
+            $(document).ready(function(){
+                $('#demo_question_button').click(function(){
+                    var message = encodeURIComponent($('#demo_question_text').val());
+                    window.location.href = 'https://chat.ecobots.ai?message=' + message;
+                });
+                
+                $("#demo_question_text").keydown(async function(evt) {
+    if (evt.keyCode === 13 && !evt.shiftKey) {
+        evt.preventDefault();
+        var message = encodeURIComponent($(this).val());
+        window.location.href = 'https://chat.ecobots.ai?message=' + message;
+    }
+});
+
+                    
+            });
+        </script>
+    
+</body>
+
+</html>

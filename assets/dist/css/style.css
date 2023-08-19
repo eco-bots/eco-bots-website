@@ -1,0 +1,90 @@
+.nav_btns{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.nav_btns .nav_link{
+    text-decoration: none;
+    font-weight: 400;
+    letter-spacing: -.1px;
+    color: #1b1b20;;
+    font-weight: 496;
+}
+.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.privacyLinks{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.center{
+    text-align: center;
+}
+.volunteer_form input{
+margin-bottom: 12px;
+}
+.volunteer img{
+    width: 250px;
+}
+.about h4{
+    color: #157f4e;;
+}
+.about_banner , .volunteer_banner{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background: url('https://www.ekobot.se/wp-content/uploads/2020/11/Ekobot-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+ .about h2{
+    color: #157f4e;
+}
+.about_banner h1{
+    color: #fff;
+}
+.about{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+.volunteer_banner{
+    background: url('https://www.harveker.com/blog/wp-content/uploads/sites/2/2020/02/habits-of-happy-people.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-position: center center;
+}
+.volunteer_banner h1{
+    color: #fff;
+}
+.about p{
+    text-transform: lowercase;
+}
+.privacy-policy, .terms{
+    padding-bottom: 100px;
+}
+.volunteer{
+    padding-bottom: 100px;
+}
+.thanks{
+    padding-top: 100px;
+    padding-bottom: 1000px;
+}
+@media (max-width: 768px) {
+    .nav_btns .nav_link, .c-btn.v--secondary {
+        font-size: 10px;
+    }
+    .about img{
+        margin-bottom: 15px;
+    }
+    .about_banner, .volunteer_banner{
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    .v--signup{
+        display: none !important;
+    }
+    
+}
