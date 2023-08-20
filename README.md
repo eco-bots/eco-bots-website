@@ -1,6 +1,3 @@
-# EcoBots website
-This repository contains code for the ecobots.ai website.
-
 ## What is EcoBots?
 It is a ChatBot guiding you in your ecological engagement. Get active in your local town or get funding for a national green initiative!
 
