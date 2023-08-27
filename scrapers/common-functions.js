@@ -1,10 +1,9 @@
 const fs = require('fs');
 
-const openAI = require("openai");
 const puppeteer = require("puppeteer-extra");
 
 module.exports = {
-    initiate: async function (url, apiKey) {
+    initiate: async function (url) {
         console.log("-----------------------------");
         console.log("Starting...");
         
