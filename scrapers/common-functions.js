@@ -30,6 +30,7 @@ module.exports = {
         if (hasSpecialChar) {
           // Double up on quotes to escape them
           let escaped = str.replace(/"/g, '""');
+          escaped = escaped.replace(/,/g, '');
           return '"' + escaped + '"';
         } else {
           return str;
